@@ -34,7 +34,7 @@ Key features include:
 
 ## Quick Start
 1] Clone the repository:
-        git clone https://github.com/yourusername/loginsight-detect.git
+        git clone https://github.com/shruti8766/loginsight-detect.git
         cd loginsight-detect
 
 2] Install dependencies:
