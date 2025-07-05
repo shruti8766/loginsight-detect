@@ -3,7 +3,6 @@ from src.detector import AnomalyDetector
 
 def test_detector():
     db_manager = DatabaseManager()
-    # Optional: Clear anomalies table before testing
     if db_manager.connection and db_manager.connection.is_connected():
         db_manager.cursor.execute("DELETE FROM anomaly")
         db_manager.connection.commit()
