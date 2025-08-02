@@ -34,23 +34,27 @@ Key features include:
 
 ## Quick Start
 1] Clone the repository:
+
         git clone https://github.com/shruti8766/loginsight-detect.git
         cd loginsight-detect
 
 2] Install dependencies:
+
         pip install -r requirements.txt
 
 3] Configure the MySQL database:
   --Create a database named project in your MySQL server. 
+  
         CREATE DATABASE project;
 
   --Update credentials in src/database.py as needed for your environment.
-        self.connection = mysql.connector.connect(
-        host="localhost",
-        database="project",
-        user="youruser",        # <-- replace with your MySQL username
-        password="yourpassword" # <-- replace with your MySQL password
-        )
+  
+                self.connection = mysql.connector.connect(
+                host="localhost",
+                database="project",
+                user="youruser",        # <-- replace with your MySQL username
+                password="yourpassword" # <-- replace with your MySQL password
+                )
 4] Place your manufacturing log CSV files in the data/ directory.
 
 
@@ -59,34 +63,37 @@ Key features include:
 
 ## Usage
 1] Launch the interactive CLI:
+
         python -m src.cli
-    -View, search, export, or clear anomalies
-    -Run anomaly detection on new log files
+  -View, search, export, or clear anomalies
+  -Run anomaly detection on new log files
 
 2] Run batch anomaly detection:
+
         python -m src.main
 
 3]Execute automated tests:
+
         python -m test.test_detector
 
 
 ---
 
 ## Project Structure
-PythonProject1/
-├── data/
-│ ├── manufacturing.py          # Data generation 
-│ └── manufacturing_logs.csv    # Sample input data
-├── src/
-│ ├── cli.py                    # Command-line interface logic
-│ ├── database.py               # Database connection and management
-│ ├── detector.py               # Anomaly detection engine
-│ └── main.py                   # Batch detection runner
-├── test/
-│ └── test_detector.py          # Automated test suite
-├── requirements.txt            # Project dependencies
-├── README.md                   # Project documentation
-└── LICENSE                     # Project license (MIT)
+        PythonProject1/
+        ├── data/
+        │ ├── manufacturing.py          # Data generation 
+        │ └── manufacturing_logs.csv    # Sample input data
+        ├── src/
+        │ ├── cli.py                    # Command-line interface logic
+        │ ├── database.py               # Database connection and management
+        │ ├── detector.py               # Anomaly detection engine
+        │ └── main.py                   # Batch detection runner
+        ├── test/
+        │ └── test_detector.py          # Automated test suite
+        ├── requirements.txt            # Project dependencies
+        ├── README.md                   # Project documentation
+        └── LICENSE                     # Project license (MIT)
 
 
 ---
@@ -94,6 +101,7 @@ PythonProject1/
 ## Testing & Quality Assurance
 -All detection logic is validated with sample scenarios in test/test_detector.py.
 -To ensure reliability, run:
+
         python -m test.test_detector
 
 
