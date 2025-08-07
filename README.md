@@ -34,14 +34,24 @@ Key features include:
 
 ## Quick Start
 1] Clone the repository:
+<<<<<<< HEAD
         git clone https://github.com/yourusername/loginsight-detect.git
         cd loginsight-detect
 
 2] Install dependencies:
+=======
+
+        git clone https://github.com/shruti8766/loginsight-detect.git
+        cd loginsight-detect
+
+2] Install dependencies:
+
+>>>>>>> 0bec3b3abb414b5909ceceece84ae7e9b1113ea5
         pip install -r requirements.txt
 
 3] Configure the MySQL database:
   --Create a database named project in your MySQL server. 
+<<<<<<< HEAD
         CREATE DATABASE project;
 
   --Update credentials in src/database.py as needed for your environment.
@@ -51,6 +61,19 @@ Key features include:
         user="youruser",        # <-- replace with your MySQL username
         password="yourpassword" # <-- replace with your MySQL password
         )
+=======
+  
+        CREATE DATABASE project;
+
+  --Update credentials in src/database.py as needed for your environment.
+  
+                self.connection = mysql.connector.connect(
+                host="localhost",
+                database="project",
+                user="youruser",        # <-- replace with your MySQL username
+                password="yourpassword" # <-- replace with your MySQL password
+                )
+>>>>>>> 0bec3b3abb414b5909ceceece84ae7e9b1113ea5
 4] Place your manufacturing log CSV files in the data/ directory.
 
 
@@ -59,6 +82,7 @@ Key features include:
 
 ## Usage
 1] Launch the interactive CLI:
+<<<<<<< HEAD
         python -m src.cli
     -View, search, export, or clear anomalies
     -Run anomaly detection on new log files
@@ -67,12 +91,26 @@ Key features include:
         python -m src.main
 
 3]Execute automated tests:
+=======
+
+        python -m src.cli
+  -View, search, export, or clear anomalies
+  -Run anomaly detection on new log files
+
+2] Run batch anomaly detection:
+
+        python -m src.main
+
+3]Execute automated tests:
+
+>>>>>>> 0bec3b3abb414b5909ceceece84ae7e9b1113ea5
         python -m test.test_detector
 
 
 ---
 
 ## Project Structure
+<<<<<<< HEAD
 PythonProject1/
 ├── data/
 │ ├── manufacturing.py          # Data generation 
@@ -87,6 +125,22 @@ PythonProject1/
 ├── requirements.txt            # Project dependencies
 ├── README.md                   # Project documentation
 └── LICENSE                     # Project license (MIT)
+=======
+        PythonProject1/
+        ├── data/
+        │ ├── manufacturing.py          # Data generation 
+        │ └── manufacturing_logs.csv    # Sample input data
+        ├── src/
+        │ ├── cli.py                    # Command-line interface logic
+        │ ├── database.py               # Database connection and management
+        │ ├── detector.py               # Anomaly detection engine
+        │ └── main.py                   # Batch detection runner
+        ├── test/
+        │ └── test_detector.py          # Automated test suite
+        ├── requirements.txt            # Project dependencies
+        ├── README.md                   # Project documentation
+        └── LICENSE                     # Project license (MIT)
+>>>>>>> 0bec3b3abb414b5909ceceece84ae7e9b1113ea5
 
 
 ---
@@ -94,6 +148,10 @@ PythonProject1/
 ## Testing & Quality Assurance
 -All detection logic is validated with sample scenarios in test/test_detector.py.
 -To ensure reliability, run:
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0bec3b3abb414b5909ceceece84ae7e9b1113ea5
         python -m test.test_detector
 
 
@@ -119,4 +177,8 @@ See the [LICENSE](LICENSE) file for details.
 ## About the Author
 Data-driven Python developer with a passion for building resilient, production-grade analytics tools for industry. Experienced in end-to-end solutions from data ingestion to actionable reporting.
 
+<<<<<<< HEAD
 For business inquiries or collaboration opportunities, please contact: shrutigaikwad8766@gmail.com
+=======
+For business inquiries or collaboration opportunities, please contact: shrutigaikwad8766@gmail.com
+>>>>>>> 0bec3b3abb414b5909ceceece84ae7e9b1113ea5

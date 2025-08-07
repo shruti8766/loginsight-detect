@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import sys
 import os
 
@@ -10,13 +11,23 @@ from detector import AnomalyDetector
 def test_detector():
     db_manager = DatabaseManager()
     
+=======
+from src.database import DatabaseManager
+from src.detector import AnomalyDetector
+
+def test_detector():
+    db_manager = DatabaseManager()
+>>>>>>> 0bec3b3abb414b5909ceceece84ae7e9b1113ea5
     if db_manager.connection and db_manager.connection.is_connected():
         db_manager.cursor.execute("DELETE FROM anomaly")
         db_manager.connection.commit()
         print("Cleared old anomalies from the database before testing.")
+<<<<<<< HEAD
     else:
         print("Database connection failed.")
         return
+=======
+>>>>>>> 0bec3b3abb414b5909ceceece84ae7e9b1113ea5
 
     detector = AnomalyDetector(db_manager)
     test_records = [
@@ -26,7 +37,10 @@ def test_detector():
         {'machine_id': 'M4', 'timstamp': '03-07-2025 09:15', 'units_produced': 100, 'temperature': 65.0, 'error_flag': 1},
         {'machine_id': 'M5', 'timstamp': '03-07-2025 09:20', 'units_produced': 30, 'temperature': 90.0, 'error_flag': 1},
     ]
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0bec3b3abb414b5909ceceece84ae7e9b1113ea5
     total_anomalies = 0
     try:
         for record in test_records:
@@ -40,10 +54,17 @@ def test_detector():
             else:
                 print("No anomalies detected.")
             print("-" * 40)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0bec3b3abb414b5909ceceece84ae7e9b1113ea5
         print(f"Total anomalies detected in test: {total_anomalies}")
     finally:
         db_manager.close()
 
 if __name__ == "__main__":
     test_detector()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0bec3b3abb414b5909ceceece84ae7e9b1113ea5
